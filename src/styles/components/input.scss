@@ -1,0 +1,43 @@
+.#{$prefix}input-wrapper {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    .#{$prefix}input {
+        width: 100%;
+        min-width: 200px;
+        height: 32px;
+        padding: 4px 7px;
+        outline: none;
+        border: 1px solid #dcdee2;
+        border-radius: 4px;
+        transition: border .2s ease-in-out,background .2s ease-in-out,box-shadow .2s ease-in-out,-webkit-box-shadow .2s ease-in-out;
+        &:hover {
+            border-color: #57a3f3;
+        }
+        &:focus {
+            box-shadow: 0 0 0 2px rgb(45 140 240 / 20%);
+            border-color: #57a3f3;
+        }
+        &:hover ~ .#{$prefix}input-icon-clear {
+            display: inline;
+        }
+    }
+    .#{$prefix}input-icon-clear {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        cursor: pointer;
+        &:hover {
+            display: inline;
+        }
+    }
+}
+
+.#{$prefix}form-item-error .#{$prefix}input-wrapper .#{$prefix}input {
+    border-color: #ed4014;
+    &:focus {
+        box-shadow: 0 0 0 2px rgb(237 64 20 / 20%);
+    }
+}

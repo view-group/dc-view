@@ -1,0 +1,45 @@
+.#{$prefix}menu-item {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 24px;
+    & > :nth-child(2) {
+        margin-left: 8px;
+    }
+    &:hover {
+        color: #2d8cf0;
+        cursor: pointer
+    }
+    &.#{$prefix}menu-item-active {
+        color: #2d8cf0;
+        background-color: #f0faff;
+        position: relative;
+        &:not(.parent-sub-menu)::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: #2d8cf0;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+    &.#{$prefix}menu-item-fold:not(.parent-sub-menu) {
+        padding: 0;
+        width: 64px;
+        justify-content: center;
+        .#{$prefix}menu-item-icon {
+            width: 64px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &.#{$prefix}menu-item-fold.parent-sub-menu {
+        height: auto;
+        border-radius: 4px;
+        padding: 4px 12px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,26 @@
+.#{$prefix}sub-menu {
+    .#{$prefix}sub-menu-icon {
+        height: 64px;
+        width: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .#{$prefix}sub-menu-title-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        position: relative;
+        height: 64px;
+        & > :nth-child(2) {
+            margin-left: 8px;
+        }
+        .#{$prefix}sub-menu-arrow {
+            position: absolute;
+            right: 20px;
+        }
+    }
+}
+.#{$prefix}menu.#{$prefix}menu-fold .#{$prefix}sub-menu .#{$prefix}sub-menu-icon {
+    display: flex;
+}

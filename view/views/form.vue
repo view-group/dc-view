@@ -1,0 +1,63 @@
+<template>
+    <button type="submit" class="mr-10" @click="validate">验证</button>
+    <button type="submit" class="mr-10" @click="validateField">验证姓名</button>
+    <button type="submit" class="mr-10" @click="resetFields">重置</button>
+    <button type="submit" @click="state.inline = !state.inline">切换</button>
+    <dc-form class="mt-20" ref="form" :inline="state.inline" :label-width="60" :model="state.form" :rules="state.rules" :required="true">
+        <dc-form-item label="姓名" prop="name" :required="false">
+            <dc-input clearable placeholder="请输入姓名" type="text" v-model="state.form.name" />
+        </dc-form-item>
+        <dc-form-item label="年龄" required prop="age">
+            <dc-input placeholder="请输入年龄" type="text" v-model="state.form.age" />
+        </dc-form-item>
+        <dc-form-item label="性别" prop="sex">
+            <dc-input placeholder="请输入性别" type="text" v-model="state.form.sex" />
+        </dc-form-item>
+        <dc-form-item label="邮箱" required prop="email">
+            <dc-input placeholder="请输入邮箱" type="text" v-model="state.form.email" />
+        </dc-form-item>
+    </dc-form>
+</template>
+
+<script setup>
+    import { reactive, ref } from "vue";
+    const state = reactive({
+        form: {},
+        rules: {
+            name: [
+                { required: true, message: "请输入姓名", trigger: "blur"},
+            ],
+            age: [
+                { required: true, message: "请输入性别", trigger: "blur" }
+            ],
+            sex: [
+                {
+                    trigger: "blur",
+                    validator(rule, value, callback) {
+                        if(!value) {
+                            callback("请输入性别")
+                        }
+                        callback();
+                    }
+                }
+            ],
+            email: [
+                { required: true, message: "请输入邮箱", trigger: "blur"},
+                { type: "email", message: "请输入正确的邮箱", trigger: "blur"},
+            ],
+        },
+        inline: false
+    })
+    const form = ref(null);
+    const validate = () => {
+        form.value.validate(valid => {
+            console.log(valid)
+        });
+    }
+    const validateField = () => {
+        form.value.validateField("name");
+    }
+    const resetFields = () => {
+        form.value.resetFields();
+    }
+</script>

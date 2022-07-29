@@ -1,0 +1,16 @@
+.#{$prefix}menu {
+    position: relative;
+    &.#{$prefix}menu-fold {
+        width: 64px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #dcdee2;
+    }
+}

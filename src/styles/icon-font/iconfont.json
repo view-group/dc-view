@@ -1,0 +1,30 @@
+{
+  "id": "3550979",
+  "name": "view",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "581031",
+      "name": "remove-sign",
+      "font_class": "remove-dc",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "15313175",
+      "name": "arrow-up",
+      "font_class": "arrow-up-dc",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "30905139",
+      "name": "arrow-up-copy",
+      "font_class": "arrow-down-dc",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    }
+  ]
+}

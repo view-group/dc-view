@@ -1,0 +1,40 @@
+.#{$prefix}form {
+    .#{$prefix}form-item {
+        margin-bottom: 24px;
+        .#{$prefix}form-item-label {
+            text-align: right;
+            padding-right: 12px;
+        }
+        .#{$prefix}form-item-content {
+            position: relative;
+            flex-grow: 1;
+            .#{$prefix}form-item-error-tip {
+                position: absolute;
+                top: 100%;
+                color: #ed4014;
+                font-size: 14px;
+            }
+        }
+    }
+    .#{$prefix}form-item-label-width {
+        display: flex;
+        align-items: center;
+        .dc-form-item-label {
+            flex-shrink: 0;
+        }
+    }
+    .#{$prefix}form-item-required .#{$prefix}form-item-label::before{
+        content: "*";
+        color: #ed4014;
+        margin-right: 4px;
+    }
+    
+}
+.#{$prefix}form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .#{$prefix}form-item {
+        margin-right: 12px;
+    }
+}

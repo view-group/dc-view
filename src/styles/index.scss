@@ -1,0 +1,12 @@
+$prefix: dc-;
+@import "./components/index.scss";
+@import "./icon-font/iconfont.css";
+
+
+html, body {
+    font-size: 14px;
+    line-height: 1.5;
+}
+* {
+    box-sizing: border-box;
+}
