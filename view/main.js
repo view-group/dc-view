@@ -29,6 +29,10 @@ const router = createRouter({
         {
             path: '/input',
             component: () => import('./views/input.vue')
+        },
+        {
+            path: '/select',
+            component: () => import('./views/select.vue')
         }
     ]
 })

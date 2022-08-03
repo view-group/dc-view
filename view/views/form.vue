@@ -16,6 +16,13 @@
         <dc-form-item label="邮箱" required prop="email">
             <dc-input placeholder="请输入邮箱" type="text" v-model="state.form.email" />
         </dc-form-item>
+        <dc-form-item label="选择框">
+            <dc-select placeholder="请选择啊啊啊">
+                <dc-option-group>
+                    <dc-option></dc-option>
+                </dc-option-group>
+            </dc-select>
+        </dc-form-item>
     </dc-form>
 </template>
 

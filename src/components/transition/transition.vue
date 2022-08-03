@@ -43,7 +43,7 @@ import { reactive, defineProps, getCurrentInstance } from "vue";
     })
     const beforeEnterInner = el => {
         if(props.type == "opacity") {
-            el.style.transition = `${props.time}s opacity`;
+            el.style.transition = `${props.time}s opacity ease-in-out`;
         }
         if(props.type == "height") {
             // 给元素设置过渡效果

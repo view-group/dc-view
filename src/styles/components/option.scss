@@ -1,0 +1,10 @@
+.#{$prefix}select-option {
+    padding: 7px 16px;
+    cursor: pointer;
+    &:hover {
+        background-color: #f3f3f3;
+    }
+    &-active {
+        color: #2d8cf0;
+    }
+}

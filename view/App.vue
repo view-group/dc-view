@@ -6,6 +6,7 @@
   <span class="item"><router-link to="/ellipsis">ellipsis</router-link></span>
   <span class="item"><router-link to="/form">form</router-link></span>
   <span class="item"><router-link to="/input">input</router-link></span>
+  <span class="item"><router-link to="/select">select</router-link></span>
   <div style="margin: 50px">
       <router-view></router-view>
   </div>
