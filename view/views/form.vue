@@ -16,10 +16,12 @@
         <dc-form-item label="邮箱" required prop="email">
             <dc-input placeholder="请输入邮箱" type="text" v-model="state.form.email" />
         </dc-form-item>
-        <dc-form-item label="选择框">
-            <dc-select placeholder="请选择啊啊啊">
+        <dc-form-item label="选择框" prop="select">
+            <dc-select v-model="state.form.select" placeholder="请选择啊啊啊" clearable>
                 <dc-option-group>
-                    <dc-option></dc-option>
+                    <dc-option value="1">一</dc-option>
+                    <dc-option value="2">二</dc-option>
+                    <dc-option value="3">三</dc-option>
                 </dc-option-group>
             </dc-select>
         </dc-form-item>
@@ -29,7 +31,9 @@
 <script setup>
     import { reactive, ref } from "vue";
     const state = reactive({
-        form: {},
+        form: {
+            select: ""
+        },
         rules: {
             name: [
                 { required: true, message: "请输入姓名", trigger: "blur"},
@@ -52,6 +56,11 @@
                 { required: true, message: "请输入邮箱", trigger: "blur"},
                 { type: "email", message: "请输入正确的邮箱", trigger: "blur"},
             ],
+            select: [
+                {
+                    required: true
+                }
+            ]
         },
         inline: false
     })
