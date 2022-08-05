@@ -1,6 +1,8 @@
 <template>
     <div class="wrapper">
         <dc-input 
+        style="width: 200px"
+            :disabled="false"
             v-model="state.name" 
             placeholder="请输入姓名"
             @on-enter="handleEnter"
@@ -9,7 +11,11 @@
             @on-change="handleChange"
             @on-clear="handleClear"
             clearable
-        ></dc-input>
+        >
+            <template #suffix>
+                    <i :class="`iconfont icon-riqi-dc`"></i>
+            </template>
+        </dc-input>
         {{state.name}}
     </div>
 </template>

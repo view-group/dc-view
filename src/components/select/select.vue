@@ -49,7 +49,7 @@
     import { oneOf, getStyle } from "../../tools/index";
     import Popper from 'popper.js/dist/umd/popper.js';
     import { reactive, defineProps, ref, onMounted, nextTick, computed, defineEmits, provide, watch } from "vue";
-    import DcTransiton from "../transition/transition.vue"
+    import DcTransiton from "../transition/transition.vue";
     const props = defineProps({
         placeholder: {
             type: String,

@@ -13,6 +13,7 @@ import Ellipsis from "./components/ellipsis/ellipsis.vue";
 import Select from "./components/select/select.vue";
 import OptionGroup from "./components/select/option-group.vue";
 import Option from "./components/select/option.vue";
+import DatePicker from "./components/date-picker/date-picker.vue"
 const components = {
     "dc-tooltip": DcToltip,
     "dc-menu": DcMenu,
@@ -29,6 +30,7 @@ components[`${prefix}form-item`] = FormItem;
 components[`${prefix}select`] = Select;
 components[`${prefix}option-group`] = OptionGroup;
 components[`${prefix}option`] = Option;
+components[`${prefix}date-picker`] = DatePicker;
 
 import clickOut from "./directives/click-out"
 const directive = {

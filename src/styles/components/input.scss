@@ -2,7 +2,7 @@
     width: 100%;
     display: inline-block;
     position: relative;
-    .#{$prefix}input {
+    .#{$prefix}input{
         width: 100%;
         min-width: 200px;
         height: 32px;
@@ -21,6 +21,21 @@
         &:hover ~ .#{$prefix}input-icon-clear {
             display: inline;
         }
+        &:hover ~ .#{$prefix}input-suffix {
+            display: none;
+        }
+        &-with-suffix {
+            padding-right: 32px;
+        }
+    }
+    .#{$prefix}input[disabled] {
+        &:hover {
+            border-color: #dcdee2;
+            cursor: not-allowed;
+        }
+        &:hover ~ .#{$prefix}input-suffix {
+            display: initial;
+        }
     }
     .#{$prefix}input-icon-clear {
         display: none;
@@ -32,6 +47,15 @@
         &:hover {
             display: inline;
         }
+        &:hover ~ .#{$prefix}input-suffix {
+            display: none;
+        }
+    }
+    .#{$prefix}input-suffix {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
     }
 }
 
