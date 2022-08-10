@@ -39,7 +39,6 @@
 
 <script setup>
     import { prefix, icon } from "../../config/index";
-    import moment from "moment"
     import { reactive, computed, defineEmits, defineProps, watch } from "vue";
     const state = reactive({
         year: "",
@@ -78,7 +77,6 @@
         let weekday = new Date(`${state.year}-${state.month}-1`).getDay();  // 当前月的第一天是周几
         let days = new Date(state.year, state.month, 0).getDate() // 当月一共多少天
         let lastMonthDays = new Date(state.year, state.month > 1? state.month - 1: 12, 0).getDate() // 上个月有多少天
-        console.log(weekday, days, lastMonthDays)
         let arr = [];
         for(let i = 0; i < days; i++) {
             arr[i] = {

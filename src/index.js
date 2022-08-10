@@ -41,7 +41,6 @@ const install = Vue => {
         Vue.component(item, components[item])
     }
     for(let item in directive) {
-        console.log(item, directive[item])
         Vue.directive(item, directive[item])
     }
 }

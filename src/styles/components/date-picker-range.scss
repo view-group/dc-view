@@ -1,0 +1,83 @@
+.#{$prefix}date-picker-range {
+    &-content {
+        display: flex;
+        &-left {
+            .#{$prefix}date-picker-range-header {
+
+            }
+        }
+        &-right {
+            .#{$prefix}date-picker-range-header {
+                
+            }
+        }
+        &-left, &-right {
+            .#{$prefix}date-picker-range-header {
+                height: 32px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #e8eaec;
+                padding: 0 10px;
+                .iconfont {
+                    font-size: 14px;
+                    cursor: pointer;
+                    &:hover {
+                        color: rgb(65, 148, 236);
+                    }
+                }
+                .#{$prefix}date-time {
+                    margin: 0 auto;
+                }
+            }
+            .#{$prefix}date-picker-range-cells {
+                width: 196px;
+                margin: 10px;
+                color: rgb(197, 200, 206);
+                .#{$prefix}date-picker-range-cell {
+                    display: inline-block;
+                    height: 28px;
+                    line-height: 28px;
+                    width: 28px;
+                    text-align: center;
+                    &-current {
+                        color: initial;
+                        cursor: pointer;
+                        em {
+                            font-style: normal;
+                            width: 24px;
+                            height: 24px;
+                            line-height: 24px;
+                            margin: 2px;
+                            display: inline-block;
+                            border-radius: 3px;
+                            position: relative;
+                            z-index: 10;
+                        }
+                        &:hover em{
+                            background-color: #e1f0fe;
+                        }
+                        &.#{$prefix}date-picker-range-cell-active em {
+                            background-color: #2d8cf0;
+                            color: #fff;
+                        }
+
+                        &.#{$prefix}date-picker-range-cell-range {
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                display: block;
+                                height: 24px;
+                                margin: 2px 0;
+                                background-color: #e1f0fe;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

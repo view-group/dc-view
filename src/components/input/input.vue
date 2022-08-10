@@ -39,7 +39,6 @@
     })
     const emit = defineEmits(["update:modelValue", "on-change", "on-blur", "on-focus", "on-clear", "on-enter"])
     const slots = useSlots();
-    console.dir(slots.suffix)
     const $input = ref(null);
     const handleInput = e => {
         let value = e.target.value;
