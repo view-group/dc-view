@@ -8,6 +8,7 @@
   <span class="item"><router-link to="/input">input</router-link></span>
   <span class="item"><router-link to="/select">select</router-link></span>
   <span class="item"><router-link to="/date-picker">date-picker</router-link></span>
+  <span class="item"><router-link to="/breadcrumb">breadcrumb</router-link></span>
   <div style="margin: 50px">
       <router-view></router-view>
   </div>

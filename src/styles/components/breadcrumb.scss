@@ -1,0 +1,24 @@
+.#{$prefix}breadcrumb {
+    color: #999;
+    &-item {
+        &-text {
+            cursor: pointer;
+            &:hover {
+                color: #57a3f3;
+            }
+        }
+        &-separator {
+            margin: 0 8px;
+        }
+    }
+    &-item:last-child {
+        .#{$prefix}breadcrumb-item-text {
+            font-weight: 700;
+            color: #515a6e;
+            cursor: initial;
+        }
+        .#{$prefix}breadcrumb-item-separator {
+            display: none;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
   "name": "dc-view",
-  "version": "0.4.7",
+  "version": "0.5.1",
   "private": false,
   "main": "lib/dc-view.umd.min.js",
   "scripts": {
@@ -10,17 +10,17 @@
   },
   "dependencies": {
     "async-validator": "^4.2.5",
-    "core-js": "^3.6.5",
     "moment": "^2.29.4",
-    "popper.js": "^1.14.6",
-    "sass": "^1.53.0",
-    "vue": "^3.0.0",
-    "vue-router": "^4.1.2"
+    "popper.js": "^1.14.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
     "@vue/compiler-sfc": "^3.0.0",
+    "sass": "^1.53.0",
+    "vue": "^3.0.0",
+    "core-js": "^3.6.5",
+    "vue-router": "^4.1.2",
     "sass-loader": "^8.0.2"
   },
   "browserslist": [
